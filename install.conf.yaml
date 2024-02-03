@@ -6,7 +6,6 @@
 - clean: ['~', '~/.config']
 
 - link:
-    ~/.aria2/aria2.conf:
     ~/.bash:
     ~/.bash_profile:
     ~/.bashrc:
