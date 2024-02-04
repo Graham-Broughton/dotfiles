@@ -27,3 +27,9 @@ curl -fsSLo Miniforge3.sh "https://github.com/conda-forge/miniforge/releases/lat
 bash Miniforge3.sh -b -p "${HOME}/miniforge"
 
 sudo apt install thefuck btop fzf tldr -y
+
+sudo apt update && sudo apt install zsh -y
+curl -s https://ohmyposh.dev/install.sh | sudo bash -s
+oh-my-posh font install Meslo
+echo "eval \"\$(oh-my-posh init zsh --config https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/hunk.omp.json)\"" >> ~/.zshrc
+sudo usermod -s $(which zsh) $USER
