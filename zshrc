@@ -35,7 +35,7 @@ DISABLE_UNTRACKED_FILES_DIRTY="true"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git ubuntu aliases common-aliases wd colored-man-pages colorize extract fzf gcloud gh globalias per-directory-history pip python universalarchive thefuck tmux systemd) # docker docker-compose dbt pipenv poetry poetry-env postgres pre-commit rust terraform
+plugins=(git ubuntu aliases common-aliases wd colored-man-pages colorize extract fzf gcloud gh globalias pip python universalarchive thefuck tmux systemd) # docker docker-compose dbt pipenv poetry poetry-env postgres pre-commit rust terraform
 
 source $ZSH/oh-my-zsh.sh
 
@@ -51,16 +51,17 @@ eval "$(oh-my-posh init zsh --config https://raw.githubusercontent.com/JanDeDobb
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/broug/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/home/broug/miniforge/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/broug/miniforge3/etc/profile.d/conda.sh" ]; then
-        . "/home/broug/miniforge3/etc/profile.d/conda.sh"
+    if [ -f "/home/broug/miniforge/etc/profile.d/conda.sh" ]; then
+        . "/home/broug/miniforge/etc/profile.d/conda.sh"
     else
-        export PATH="/home/broug/miniforge3/bin:$PATH"
+        export PATH="/home/broug/miniforge/bin:$PATH"
     fi
 fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+eval "$(oh-my-posh init zsh --config https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/hunk.omp.json)"
