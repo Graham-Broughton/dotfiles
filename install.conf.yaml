@@ -9,6 +9,7 @@
     ~/.bash:
     ~/.bash_profile:
     ~/.bashrc:
+      force: true
     ~/.conda-env:
     ~/.dotfiles: ''
     ~/.gitconfig:
@@ -20,6 +21,7 @@
     ~/.vimrc:
     ~/.ohmyzsh:
     ~/.zshrc:
+      force: true
 
 - shell:
   - [git submodule update --init --recursive, Installing submodules]
