@@ -131,3 +131,11 @@ fi
 unset __conda_setup
 # <<< conda initialize <<<
 
+eval "$(oh-my-posh init bash --config https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/hunk.omp.json)"
+
+# auto activate conda env
+FILE=./.conda-env
+if [[ -f "$FILE" ]]; then
+    CONDA_ENV=$(<$FILE)
+    conda activate $CONDA_ENV
+fi

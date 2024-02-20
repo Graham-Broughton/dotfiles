@@ -19,12 +19,16 @@ sudo apt install code-insiders
 
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo apt install ./google-chrome-stable_current_amd64.deb -y
+rm google-chrome-stable_current_amd64.deb
 
 pip install PyGObject
 wget -qO- https://raw.githubusercontent.com/cra0zy/code-nautilus/master/install.sh | bash
 
 curl -fsSLo Miniforge3.sh "https://github.com/conda-forge/miniforge/releases/latest/download/Miniforge3-$(uname -s)-$(uname -m).sh"
-bash Miniforge3.sh -b -p "${HOME}/miniforge"
+bash Miniforge3.sh -b -p "${HOME}/miniforge3"
+rm Miniforge3.sh
+eval ~/.bashrc
+conda config --set auto_activate_base false
 
 sudo apt install thefuck btop fzf tldr -y
 
