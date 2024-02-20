@@ -51,20 +51,18 @@ eval "$(oh-my-posh init zsh --config https://raw.githubusercontent.com/JanDeDobb
 
 # >>> conda initialize >>>
 # !! Contents within this block are managed by 'conda init' !!
-__conda_setup="$('/home/broug/miniforge/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
+__conda_setup="$('/home/broug/miniforge3/bin/conda' 'shell.zsh' 'hook' 2> /dev/null)"
 if [ $? -eq 0 ]; then
     eval "$__conda_setup"
 else
-    if [ -f "/home/broug/miniforge/etc/profile.d/conda.sh" ]; then
-        . "/home/broug/miniforge/etc/profile.d/conda.sh"
+    if [ -f "/home/broug/miniforge3/etc/profile.d/conda.sh" ]; then
+        . "/home/broug/miniforge3/etc/profile.d/conda.sh"
     else
-        export PATH="/home/broug/miniforge/bin:$PATH"
+        export PATH="/home/broug/miniforge3/bin:$PATH"
     fi
 fi
 unset __conda_setup
 # <<< conda initialize <<<
-
-eval "$(oh-my-posh init zsh --config https://raw.githubusercontent.com/JanDeDobbeleer/oh-my-posh/main/themes/hunk.omp.json)"
 
 # auto activate conda env
 FILE=./.conda-env
@@ -72,3 +70,4 @@ if [[ -f "$FILE" ]]; then
     CONDA_ENV=$(<$FILE)
     conda activate $CONDA_ENV
 fi
+
